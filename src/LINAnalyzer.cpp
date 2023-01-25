@@ -114,7 +114,7 @@ void LINAnalyzer::WorkerThread()
             showIBS = true;
             if( byteFrame.mData1 == 0x00 )
             {
-                mFrameState = LINAnalyzerResults::headerSync;
+                mFrameState = LINAnalyzerResults::headerPID;
                 byteFrame.mType = LINAnalyzerResults::headerBreak;
                 is_start_of_packet = true;
             }
@@ -283,12 +283,12 @@ void LINAnalyzer::SetupResults()
 
 const char* LINAnalyzer::GetAnalyzerName() const
 {
-    return "LIN";
+    return "LINAK-LIN";
 }
 
 const char* GetAnalyzerName()
 {
-    return "LIN";
+    return "LINAK-LIN";
 }
 
 Analyzer* CreateAnalyzer()

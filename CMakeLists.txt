@@ -1,5 +1,5 @@
 cmake_minimum_required (VERSION 3.11)
-project(lin_analyzer)
+project(linak_analyzer)
 
 add_definitions( -DLOGIC2 )
 
@@ -24,4 +24,4 @@ src/LINSimulationDataGenerator.cpp
 src/LINSimulationDataGenerator.h
 )
 
-add_analyzer_plugin(lin_analyzer SOURCES ${SOURCES})
+add_analyzer_plugin(linak_analyzer SOURCES ${SOURCES})
